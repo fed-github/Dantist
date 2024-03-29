@@ -1,21 +1,28 @@
 import { useState } from 'react'
 import { React } from 'react'
-import '../main.css'
+import './AppBurger.css'
 import Menu from './Menu/Menu'
 
 export default function AppBurger(){
 
-    const [menuActive, setMenuActive] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
     
-    const items = [{value: 'Главная', href: '/main', icon:'anchor'},
-    {value: 'Услуги', href: '/service', icon:'dialer_sip'},
-    {value: 'Магазин', href: '/shop', icon:'api'},]
+    const items = [
+        {value: 'Главная', href: '/main', icon:'anchor'},
+        {value: 'Услуги', href: '/service', icon:'dialer_sip'},
+        {value: 'Магазин', href: '/shop', icon:'api'},
+        {value: 'О компании', href: '/main', icon:'android'}
+    ]
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+      }; 
 
     return(
         <div className="app">
-            <nav>
-                <div className="burger-btn" onClick={()=> setMenuActive(!menuActive)}>
-                    <span/>
+            <nav className='burger-menu'>
+                <div className={ isOpen ? 'burger-btn active' : 'burger-btn'} onClick={toggleMenu}>
+                    <span></span>
                 </div>
             </nav>
 
@@ -27,7 +34,7 @@ export default function AppBurger(){
                 Consequatur voluptate reprehenderit aliquid omnis autem enim molestias suscipit earum. Nostrum itaque error ut autem laboriosam temporibus. Ducimus, voluptatibus soluta quasi incidunt magni odit voluptas! Voluptatum accusamus unde cum saepe?
                 </p>
             </main>
-            <Menu active={menuActive} setActive={setMenuActive} header={'Бургер меню'} items={items} />
+            <Menu active={isOpen} setActive={setIsOpen} header={'Бургер меню'} items={items} />
         </div>
         
     )
