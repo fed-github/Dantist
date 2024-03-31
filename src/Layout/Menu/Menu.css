@@ -17,6 +17,7 @@
     backdrop-filter: blur(2px);
     position: absolute;
     left: 33%;
+    transform: none;
 }
 
 .menu__content{

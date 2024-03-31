@@ -1,5 +1,3 @@
-/* styles.css */
-
 * {
   margin: 0;
   padding: 0;
@@ -15,18 +13,10 @@ nav {
   height: 50px;
   width: 100%;
   background-color: rgb(111, 163, 165);
-  position: fixed;
+  /* position: fixed; */
   z-index: 50;
   display: flex;
   align-items: center;
-}
-
-main {
-  padding: 100px; /* было: 50px */
-}
-
-main p {
-  margin: 20px;
 }
 
 .burger-btn {
@@ -72,3 +62,4 @@ main p {
 .burger-btn.active:after {
   transform: translateY(-11px) rotate(-45deg);
 }
+
