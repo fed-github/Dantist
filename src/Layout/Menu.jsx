@@ -1,11 +1,13 @@
 import React from 'react';
-import './Menu.css'
+import './Css/Menu.css'
 
 const Menu = ({header, items, active, setActive}) => {
 
     return (
+       <> 
+        <div className={active ? 'blur': ''}></div>
         <div className={active ? 'menu active': 'menu'} onClick={()=>setActive(false)}>
-            <div className="blur"></div>
+            
             <div className="menu__content" onClick={(e)=> e.stopPropagation()}>
                 <div className="menu__header">{header} </div>
                 <ul>
@@ -13,13 +15,14 @@ const Menu = ({header, items, active, setActive}) => {
 
                        <li>
                             <a href={item.href}>{item.value}</a>
-                            <span className='material-icons'>{item.icon}</span>
+                            {/* <span className='material-icons'>{item.icon}</span> */}
                        </li> 
 
                     )}
                 </ul>
             </div>
         </div>
+        </>
     )
 
 }

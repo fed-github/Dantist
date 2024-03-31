@@ -1,13 +1,13 @@
 import { React } from 'react'
 import AppBurger from './Layout/AppBurger';
-import AppMain from './Layout/AppMain';
+import AppContent from './Layout/AppContent';
 
 function App() {
 
   return (
     <>
      <AppBurger/>
-     <AppMain/>
+     <AppContent/>
     </>
   )
 }

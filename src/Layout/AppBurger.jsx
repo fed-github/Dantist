@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { React } from 'react'
 import './Css/AppBurger.css'
-import Menu from './Menu/Menu'
+import Menu from './Menu'
 
 export default function AppBurger(){
 
@@ -19,13 +19,13 @@ export default function AppBurger(){
       }; 
 
     return(
-        <div className="app">
+        <div>
             <nav className='burger-menu'>
                 <div className={ isOpen ? 'burger-btn active' : 'burger-btn'} onClick={toggleMenu}>
                     <span></span>
                 </div>
             </nav>
-            <Menu active={isOpen} setActive={setIsOpen} header={'Бургер меню'} items={items} />
+            <Menu active={isOpen} setActive={setIsOpen} header={'Dantist clinic'} items={items} />
         </div>
         
     )

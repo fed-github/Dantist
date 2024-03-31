@@ -26,6 +26,10 @@ nav {
   position: relative;
   cursor: pointer;
 }
+.burger-btn:hover span{
+  background-color: rgb(228, 61, 61);
+  transition: all 1s;
+}
 
 .burger-btn:before,
 .burger-btn span,
