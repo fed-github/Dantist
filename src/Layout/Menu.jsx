@@ -1,8 +1,16 @@
-import React from 'react';
+import {React, useEffect} from 'react';
 import './Css/Menu.css'
 
 const Menu = ({header, items, active, setActive}) => {
-
+    
+    useEffect(() => {
+        if (active) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = 'auto';
+        }
+      }, [active]);
+      
     return (
        <> 
         <div className={active ? 'blur': ''}></div>

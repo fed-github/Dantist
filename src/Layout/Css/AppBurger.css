@@ -2,21 +2,84 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 2rem;
+  font-style: normal;
 }
 
 body {
-  background-color: #242424;
+  background-image: url("src/icons/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+ 
+
   color: rgb(218, 221, 224);
 }
-
-nav {
-  height: 50px;
-  width: 100%;
-  background-color: rgb(111, 163, 165);
-  /* position: fixed; */
+.burger-menu {
+  margin: 0 5%;
+  height: 60px;
+  width: 90%;
+  /* background-color: rgb(111, 163, 165); */
+  position: fixed;
   z-index: 50;
   display: flex;
   align-items: center;
+  border-radius: 50%;
+  top: 15px;
+ 
+  
+}
+
+.burger-menu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(247, 242, 242, 0.68); */
+  backdrop-filter: blur(4px);
+  z-index: -1;
+  border-radius: 20px;
+  border: 3px rgb(0, 107, 128) solid;
+  
+}
+.nav_aligner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+  width: 100vw;
+}
+/* .burger-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.title{
+  margin-right: 10px;
+  font-size: 3rem;
+  color: white;
+}
+
+.logo{
+  /* display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center; */
+  /* margin-top: 28px; */
+  /* width: 100vw; */
+  height: 50px;
+  /* margin-top: 25px; */
+}
+.logo img {
+  
+  width: 50px; /* Ограничьте ширину логотипа */
+  height: 50px;
+  border-radius: 50px;
 }
 
 .burger-btn {
@@ -26,10 +89,6 @@ nav {
   position: relative;
   cursor: pointer;
 }
-.burger-btn:hover span{
-  background-color: rgb(228, 61, 61);
-  transition: all 1s;
-}
 
 .burger-btn:before,
 .burger-btn span,
@@ -38,7 +97,7 @@ nav {
   position: absolute;
   width: 25px;
   height: 3px;
-  background-color: rgb(76, 76, 76);
+  background-color: rgb(246, 241, 241);
   transition: transform 0.3s ease;
 }
 
@@ -66,4 +125,18 @@ nav {
 .burger-btn.active:after {
   transform: translateY(-11px) rotate(-45deg);
 }
+
+  main{
+      padding:0px  50px;
+  }
+
+
+  @media screen and (max-width: 768px){
+
+    .title{
+      margin-right: 10px;
+      font-size: 2rem;
+    }
+  }
+
 

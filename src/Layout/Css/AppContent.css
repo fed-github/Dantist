@@ -1,19 +1,49 @@
 
 
-main {
-    padding:0 50px; 
-  }
-  
-main p {
-  margin: 20px;
+.main {
+  padding:85px 5% 20px 5%; 
+  /* margin-right: 50px; */
+  display: flex;
+  flex-direction: column; /* Располагает дочерние элементы в столбец */
+  align-items: center;
 }
-/* main p:nth-child(1){
-  margin-top: 50px;
-} */
+.main__cover {
+  display: flex;
+  flex-direction: column; /* Располагает дочерние элементы в столбец */
+  align-items: center;
+  /* background-image: url('src/icons/main__cover.jpg');
+  background-size: cover; 
+  background-position: center; */
+  border-radius: 25px;
+  padding: 20px;
+  background-color: rgba(89, 245, 33, 0.126);
+}
+
+.profile-photo{
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-photo img{
+  width: 50%;
+  border-radius: 50px;
+}
+.main p {
+  padding: 20px 0;
+}
+.Grid_title{
+  align-self: center;
+  margin-bottom: 10px;
+}
 
 @media screen and (max-width: 768px){
 
-  main{
-      padding:0px  50px;
+  .main{
+    padding:85px 10% 20px 10%; 
   }
+  .profile-photo img{
+    width: 100%;
+  }
+
 }

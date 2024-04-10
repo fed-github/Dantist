@@ -1,0 +1,51 @@
+.slider {
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+    background-color: #97adb8;
+    border-radius: 20px;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.2s ease;
+    width: 300%; /* Добавляем ширину, чтобы все слайды поместились на одной строке */
+  }
+  
+  .slide {
+    flex: 0 0 33.33%; /* Изменяем ширину слайдов на 33.33%, чтобы поместить 3 слайда в строку */
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
