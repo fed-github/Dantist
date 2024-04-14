@@ -1,32 +1,13 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 2rem;
-  font-style: normal;
-}
 
-body {
-  background-image: url("src/icons/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
- 
-
-  color: rgb(218, 221, 224);
-}
 .burger-menu {
   margin: 0 5%;
   height: 60px;
   width: 90%;
-  /* background-color: rgb(111, 163, 165); */
   position: fixed;
   z-index: 50;
   display: flex;
   align-items: center;
-  border-radius: 50%;
+  border-radius: 25px;
   top: 15px;
  
   
@@ -39,11 +20,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: rgba(247, 242, 242, 0.68); */
-  backdrop-filter: blur(4px);
+  background-color: rgba(104, 149, 211, 0.574);
+  backdrop-filter: blur(2px);
   z-index: -1;
   border-radius: 20px;
-  border: 3px rgb(0, 107, 128) solid;
+  /* border: 3px rgb(0, 107, 128) solid; */
   
 }
 .nav_aligner{
@@ -63,6 +44,7 @@ body {
   margin-right: 10px;
   font-size: 3rem;
   color: white;
+  /* -webkit-text-stroke: 0.5px black; */
 }
 
 .logo{

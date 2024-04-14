@@ -19,27 +19,28 @@ const icons = [
   { image: Parodontology, title: 'Пародонтология' },
   { image: Implant, title: 'Имплантация зубов' },
   { image: Kids, title: 'Детская стоматология' },
-  { image: Diagnosis, title: 'Диагностика' },
+  // { image: Diagnosis, title: 'Диагностика' },
   { image: Light, title: 'Осветление' },
   { image: Remove, title: 'Удаление зуба' }
 ];
 
 const Grid = () => {
+  
   return (
     <div className="grid-content">
       {icons.map((icon, index) => (
 
         <div className={`column ${icon.title === 
-          'Пародонтология' ? 'hide-mobile' : ''}`} key={index}>
+          'Диагностика' ? 'hide-mobile' : ''}`} key={index}>
 
           <div className="icon_cover">
             {/* Используем деструктуризацию для получения image и title */}
             <img src={icon.image} alt="teeth_logo" />
           </div>
           
-          <h4 style={{ marginTop: '5px' }}>{icon.title}</h4>
+          <h4 style={{ marginTop: '10px' }}>{icon.title}</h4>
 
-          <a href="">Подробнее</a>
+          <a href="" >Подробнее</a>
         </div>
       ))}
     </div>

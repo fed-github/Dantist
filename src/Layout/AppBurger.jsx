@@ -72,4 +72,4 @@ export default function AppBurger(){
         </div>
         // header={'Dantal clinic'}
     )
-                        }
+}

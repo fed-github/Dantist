@@ -3,10 +3,9 @@
   .grid-content {
     display: grid;
     align-self: center;
-    grid-template-columns: 1fr  1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr  1fr 1fr 1fr;
     gap: 16px;
-    /* width: 90%; */
+    margin: 0 auto;
   }
   
   .column {
@@ -34,23 +33,28 @@
   
   .column h4 {
     text-align: center;
+    color: white;
   }
   .column a{
     text-decoration: none;
     cursor: pointer;
-    color: aliceblue;
+    color: rgb(192, 222, 248);
   }
-  .column:hover {
-    background-color: rgb(16, 86, 91);
-    box-shadow: 0 0 50px rgba(0, 247, 119, 0.512);
-    transition: all 0.3s;
+  .column:hover a {
+    color: rgba(245, 137, 238, 0.994);
   }
   
+  .column:hover {
+    background-color: rgb(16, 86, 91);
+    box-shadow: 0 0 50px rgb(255, 255, 255);
+    transition: all 0.3s;
+  }
+ 
   .column:hover .icon_cover {
     /* background-color: #cb6c6c;  */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
-  
+ 
   
   @media screen and (max-width: 768px){
     
