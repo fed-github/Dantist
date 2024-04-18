@@ -1,0 +1,52 @@
+/* Modal Styles */
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.7s ease; /* Smooth transition for opacity */
+  }
+  
+  .modal-container.active {
+    opacity: 1; /* Make modal visible */
+  }
+  
+  .modal-content {
+    background-color: #fff; /* White background for modal content */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    max-width: 800px; /* Limit modal width */
+    margin: 0 auto; /* Center the modal content */
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .modal-content p {
+    margin-bottom: 10px;
+  }
+  
+  .modal-content button {
+    background-color: #9C27B0; /* Purple background */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  .modal-content button:hover {
+    background-color: #881F9A; /* Darker purple on hover */
+  }
+  

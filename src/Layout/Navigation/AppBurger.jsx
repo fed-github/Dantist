@@ -1,9 +1,8 @@
-import { useState } from 'react'
-import { React } from 'react'
-import './Css/AppBurger.css'
+import { React, useState  } from 'react'
+import './AppBurger.css'
 import Menu from './Menu'
-import logo1 from '../icons/logo.jpg.avif';
-import logo2 from '../icons/logo2.png';
+import logo1 from '/src/icons/logo.jpg.avif';
+import logo2 from '/src/icons/logo2.png';
 
 export default function AppBurger(){
 

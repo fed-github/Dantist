@@ -1,6 +1,7 @@
 import { React } from 'react'
-import AppBurger from './Layout/AppBurger';
-import AppContent from './Layout/AppContent';
+import AppBurger from './Layout/Navigation/AppBurger';
+import AppContent from './Layout/Content/AppContent';
+import './main.css'
 
 function App() {
 

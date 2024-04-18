@@ -5,9 +5,10 @@
   /* margin-right: 50px; */
 }
 
-.main p {
-  padding: 20px 0;
+.main > div{
+  margin: 20px 0;
 }
+
 
 .photo_section{
   display: flex;
@@ -27,12 +28,29 @@
   border-radius: 50px;
 }
 
+
+
+.grid_section {
+  display: flex;
+  flex-direction: column; /* Располагает дочерние элементы в столбец */
+  align-items: center;
+  justify-content: center;
+  /* background-image: url('src/icons/main__cover.jpg');
+  background-size: cover; 
+  background-position: center; */
+  border-radius: 25px;
+  padding: 20px;
+  padding-bottom: 40px;
+  background-color: rgba(33, 167, 245, 0.126);
+  backdrop-filter: blur(4px);
+}
 .grid_title{
   align-self: center;
   margin-bottom: 10px;
-  background-color: rgba(34, 163, 180, 0.405);
+  /* background-color: rgba(34, 163, 180, 0.405); */
   width: 100%;
   text-align: center;
+  font-size: 2rem;
   border-radius: 50px;
   margin-bottom: 20px;
   
@@ -48,21 +66,16 @@
   transition: transform 1s ease-in; 
 } */
 
-.grid_section {
-  display: flex;
-  flex-direction: column; /* Располагает дочерние элементы в столбец */
-  align-items: center;
-  justify-content: center;
-  /* background-image: url('src/icons/main__cover.jpg');
-  background-size: cover; 
-  background-position: center; */
-  border-radius: 25px;
-  /* margin: 20px 0; */
+.describtion_section{
+  background-color: rgba(109, 109, 206, 0.365);
   padding: 20px;
-  padding-bottom: 20px;
-  background-color: rgba(33, 167, 245, 0.126);
+  border-radius: 25px;
   backdrop-filter: blur(4px);
 }
+
+
+
+
 
 
 @media screen and (max-width: 768px){
@@ -70,10 +83,8 @@
   .main{
     padding:85px 10% 20px 10%; 
   }
-  .profile-photo img{
-    width: 100%;
+  .grid_section{
+    padding-bottom: 20px;
   }
-  /* .grid_title{
-    font-size: 0.9rem;
-  } */
+  
 }

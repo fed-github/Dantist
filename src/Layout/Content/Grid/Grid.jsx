@@ -1,37 +1,54 @@
-import React from "react";
-import "./Css/Grid.css";
+import {React, useState} from "react";
+import "./Grid.css";
+import Modal from './Modal';
 
 // Импортируем изображения в массив
-import Opinion from './grid_icons/Opinion.png';
-import Profilactic from './grid_icons/Profilactic.png';
-import Healing from './grid_icons/Healing.png';
-import Parodontology from './grid_icons/Parodontology.png';
-import Implant from './grid_icons/Implant.png';
-import Kids from './grid_icons/Kids.png';
-import Diagnosis from './grid_icons/Diagnosis.png';
-import Light from './grid_icons/Light.png';
-import Remove from './grid_icons/Remove.png';
+import Opinion from '/src/icons/grid_icons/Opinion.png';
+import Profilactic from '/src/icons/grid_icons/Profilactic.png';
+import Healing from '/src/icons/grid_icons/Healing.png';
+import Parodontology from '/src/icons/grid_icons/Parodontology.png';
+import Implant from '/src/icons/grid_icons/Implant.png';
+import Kids from '/src/icons/grid_icons/Kids.png';
+// import Diagnosis from '/src/icons/grid_icons/Diagnosis.png';
+import Light from '/src/icons/grid_icons/Light.png';
+import Remove from '/src/icons/grid_icons/Remove.png';
+
 
 const icons = [
+  
   { image: Opinion, title: 'Экспертное мнение врача' },
-  { image: Profilactic, title: 'Профилактика' },
   { image: Healing, title: 'Лечение зубов' },
-  { image: Parodontology, title: 'Пародонтология' },
+  { image: Remove, title: 'Удаление зуба' },
   { image: Implant, title: 'Имплантация зубов' },
+  { image: Light, title: 'Осветление' },
+  { image: Parodontology, title: 'Пародонтология' },
+  { image: Profilactic, title: 'Профилактика' },
   { image: Kids, title: 'Детская стоматология' },
   // { image: Diagnosis, title: 'Диагностика' },
-  { image: Light, title: 'Осветление' },
-  { image: Remove, title: 'Удаление зуба' }
+ 
+
 ];
 
 const Grid = () => {
-  
+  const [selectedService, setSelectedService] = useState(null);
+  const [isOpenModal, setIsOpenModal] = useState(false);
+
+  const handleOpenModal = (serviceInfo) => {
+    setSelectedService(serviceInfo);
+    setIsOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsOpenModal(false);
+  };
+
   return (
     <div className="grid-content">
+
       {icons.map((icon, index) => (
 
         <div className={`column ${icon.title === 
-          'Диагностика' ? 'hide-mobile' : ''}`} key={index}>
+          'Диагностика' ? 'hide-mobile' : ''}`} key={index} onClick={() => handleOpenModal(icon)}>
 
           <div className="icon_cover">
             {/* Используем деструктуризацию для получения image и title */}
@@ -41,8 +58,17 @@ const Grid = () => {
           <h4 style={{ marginTop: '10px' }}>{icon.title}</h4>
 
           <a href="" >Подробнее</a>
+          
         </div>
-      ))}
+
+          ))}
+        
+        {isOpenModal && selectedService && (
+          <Modal
+            serviceInfo={selectedService}
+            onClose={handleCloseModal}
+          />
+        )}
     </div>
   );
 };

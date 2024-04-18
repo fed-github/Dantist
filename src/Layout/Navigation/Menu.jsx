@@ -1,5 +1,5 @@
 import {React, useEffect} from 'react';
-import './Css/Menu.css'
+import './Menu.css'
 
 const Menu = ({header, items, active, setActive}) => {
     

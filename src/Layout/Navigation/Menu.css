@@ -38,33 +38,25 @@
     transition: all 0.4s;
 }
 
-/* .menu__header{
-    font-size: 2rem;
-    color: white;
-    border-bottom: 1px solid white;
-    width: 100%; 
-    text-align: center;
-    margin-bottom: 5px;
-} */
 
-ul li a {
+.menu__content ul li a {
     color: white;
     text-decoration: none;
 }
 
-ul li {
+.menu__content ul li {
     font-size: 1.5rem;
     display: flex;
     align-items: center;
     margin: 0px;
     padding: 5px 0px;
 }
-ul li a:hover{
+.menu__content ul li a:hover{
     font-size: 2rem;
     transition: all 0.2s;
     color: rgb(0, 107, 128);
 }
-ul {
+.menu__content ul {
     text-align: center; 
     display: flex;
     flex-direction: column;
