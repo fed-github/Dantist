@@ -11,10 +11,10 @@ export default function AppBurger(){
     const [clickCount, setClickCount] = useState(0);
     
     const items = [
-        {value: 'Главная', href: '/main', icon:'anchor'},
-        {value: 'Услуги', href: '/service', icon:'dialer_sip'},
-        {value: 'Магазин', href: '/shop', icon:'api'},
-        {value: 'О компании', href: '/main', icon:'android'}
+        {value: 'Главная', href: '/#блок0',dataOffset: 80, icon:'anchor'},
+        {value: 'Услуги', href: '/#блок1', dataOffset: 160, icon:'dialer_sip'},
+        {value: 'О клинике', href: '/#блок2', dataOffset: 80, icon:'api'},
+        {value: 'Адрес и контакты', href: '/#блок3',dataOffset: 80,  icon:'android'}
     ]
 
     const toggleMenu = () => {

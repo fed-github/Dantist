@@ -20,14 +20,16 @@
   
   .modal-content {
     background-color: #fff; /* White background for modal content */
-    padding: 20px;
+    padding: 200px;
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow */
     max-width: 800px; /* Limit modal width */
     margin: 0 auto; /* Center the modal content */
+    color: black;
   }
   
   .modal-content h2 {
+
     margin-top: 0;
     margin-bottom: 20px;
   }
