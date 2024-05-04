@@ -3,7 +3,6 @@ import "./Grid.css";
 import Modal from "./Modal";
 import { serviceData } from "/src/data.js";
 
-
 const Grid = () => {
   const [selectedService, setSelectedService] = useState(null);
   const [isOpenModal, setIsOpenModal] = useState(false);
@@ -21,7 +20,7 @@ const Grid = () => {
     <div className="grid-content">
       {serviceData.map((serviceData, index) => (
         <div
-          className={`column ${serviceData.title === "Диагностика" ? "hide-mobile" : ""}`}
+          className={" column "}
           key={index}
           onClick={() => handleOpenModal(serviceData)}
         >
@@ -33,14 +32,11 @@ const Grid = () => {
           <a href="#">Подробнее</a>
         </div>
       ))}
-
+      
       {isOpenModal && selectedService && (
-        <Modal
-        serviceInfo={selectedService}
-        onClose={handleCloseModal}
-      >
-        <p>Цена: ${parseInt(selectedService.price)}</p>
-      </Modal>
+        <Modal serviceInfo={selectedService} onClose={handleCloseModal}>
+          <p>Цена: ${parseInt(selectedService.price)}</p>
+        </Modal>
       )}
     </div>
   );

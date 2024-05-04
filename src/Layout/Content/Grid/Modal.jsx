@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Modal.css";
+// import "./Modal.css";
 
 const Modal = ({ serviceInfo, onClose }) => {
   const [showContent, setShowContent] = useState(false);
@@ -20,9 +20,11 @@ const Modal = ({ serviceInfo, onClose }) => {
       className={`fixed top-0 left-0 w-full h-full overflow-hidden bg-gray-500/75 z-10 flex justify-center items-center`}
       onClick={handleClose}
     >
+
       <div
         className={`absolute bg-white rounded-lg shadow-lg p-4 max-w-sm w-full`}
       >
+        
         <h2 className={`text-blue-700 font-bold `}>{serviceInfo.title}</h2>
         <img
           src={serviceInfo.image}
