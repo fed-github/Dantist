@@ -1,13 +1,13 @@
 import React from "react";
 import foto from "/src/icons/negro.jpg";
 import Grid from "./Grid/Grid";
-import Modal from "./New_Modal";
+import Modal from "./Grid/Modal";
 import "./AppContent.css";
+import New_Modal from "./Grid/New_Modal";
 
 export default function AppContent() {
   return (
     <main className="main" id="блок0">
-  <Modal/>
       <div className="photo_section">
         <div className="flex flex-col items-center p-4 bg-gradient-to-r from-[#31135E] to-[#220D48] text-white rounded-lg shadow-md max-w-[90%] mx-auto">
           <img
@@ -23,14 +23,14 @@ export default function AppContent() {
                 </div> */}
       </div>
 
-      <div className="grid_section">
+      {/* <div className="grid_section"> */}
         
         <div id="блок1"  className="grid_title">
           <h2>Основные услуги клиники</h2>
         </div>
         
-        <Grid />
-      </div>
+        <Grid/>
+      {/* </div> */}
 
       <div id="блок2" className="describtion_section text-white">
 
