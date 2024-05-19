@@ -1,3 +1,4 @@
+
 .menu{
     position: fixed;
     width: 100%;
@@ -24,9 +25,8 @@
     height: 100%;
     z-index: 10;
     transition: all 0.2s;
-  }
+}
   
-
 .menu__content{
     width: 33%;
     height: 100%;
@@ -42,6 +42,7 @@
 .menu__content ul li a {
     color: white;
     text-decoration: none;
+    transition: all 1s ease-in-out;
 }
 
 .menu__content ul li {

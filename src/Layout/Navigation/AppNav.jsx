@@ -1,35 +1,19 @@
 import { React, useState  } from 'react'
-import './AppBurger.css'
-import Menu from './Menu'
+import './AppNav.css'
+import BurgerMenu from './BurgerMenu'
 import logo1 from '/src/icons/logo.jpg.avif';
 import logo2 from '/src/icons/logo2.png';
+import LanguageDropdown from './LanguageDropdown'
 
-export default function AppBurger(){
+export default function AppNav(){
 
     const [isOpen, setIsOpen] = useState(false);
     const [logoVisible, setLogoVisible] = useState(true );
     const [clickCount, setClickCount] = useState(0);
     
-    const items = [
-        {value: 'Главная', href: '/#блок0',dataOffset: 80, icon:'anchor'},
-        {value: 'Услуги', href: '/#блок1', dataOffset: 160, icon:'dialer_sip'},
-        {value: 'О клинике', href: '/#блок2', dataOffset: 80, icon:'api'},
-        {value: 'Адрес и контакты', href: '/#блок3',dataOffset: 80,  icon:'android'}
-    ]
-
     const toggleMenu = () => {
         setIsOpen(!isOpen);
       }; 
-
-
-    //   const handleMouseEnter = () => {
-    //     setLogoVisible(false);
-    //     setTimeout(() => setLogoVisible(true), 300);
-    //   };
-    
-    //   const handleMouseLeave = () => {
-    //     setLogoVisible(true);
-    //   };
 
       const handleLogoClick = () => {
         if (clickCount === 0) { // Проверяем, был ли уже сделан клик на логотип
@@ -43,7 +27,7 @@ export default function AppBurger(){
 
     return(
         <div>
-            <nav className='burger-menu'>
+            <nav className='navigation-menu'>
 
                 <div className={ isOpen ? 'burger-btn active' : 'burger-btn'} onClick={toggleMenu}>
                     <span></span>
@@ -66,8 +50,9 @@ export default function AppBurger(){
                             </div>}
                     </div>
                 </div>
+                {/* <LanguageDropdown/> */}
             </nav>
-            <Menu active={isOpen} setActive={setIsOpen}  items={items} />
+            <BurgerMenu active={isOpen} setActive={setIsOpen} toggleMenu={toggleMenu}  />
         </div>
         // header={'Dantal clinic'}
     )

@@ -17,7 +17,7 @@ const New_Modal = ({ serviceInfo, onClose }) => {
   if (!showContent) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50">
+    <div className="fixed class inset-0 flex items-center justify-center z-50">
       <div
         id="default-modal"
         tabIndex="-1"
