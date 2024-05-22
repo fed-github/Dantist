@@ -1,4 +1,4 @@
-// Импортируем изображения в массив
+// // Импортируем изображения в массив
 import Opinion from '/src/icons/grid_icons/Opinion.png';
 import Profilactic from '/src/icons/grid_icons/Profilactic.png';
 import Healing from '/src/icons/grid_icons/Healing.png';

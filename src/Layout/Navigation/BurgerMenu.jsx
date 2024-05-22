@@ -1,8 +1,7 @@
-import { React, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./BurgerMenu.css";
 
 const BurgerMenu = ({ active, setActive, toggleMenu }) => {
-
   useEffect(() => {
     if (active) {
       document.body.style.overflow = "hidden";
@@ -11,22 +10,33 @@ const BurgerMenu = ({ active, setActive, toggleMenu }) => {
     }
   }, [active]);
 
-  const links = document.querySelectorAll(".menu__content ul li a");
-  const items = [
-    {value: 'Главная', href: '/#блок0', icon:'anchor'},
-    {value: 'Услуги', href: '/#блок1', icon:'dialer_sip'},
-    {value: 'О клинике', href: '/#блок2', icon:'api'},
-    {value: 'Адрес', href: '/#блок3', icon:'android'}
-  ]
+  const handleLinkClick = (event, href) => {
+    event.preventDefault();
+    const targetId = href.split("#")[1];
+    const targetElement = document.getElementById(targetId);
 
-  links.forEach((link) => {
-    link.addEventListener("click", () => {
+    if (targetElement) {
+      const yOffset = -80; // Adjust this value to match the height of your fixed navigation menu
+      const yPosition =
+        targetElement.getBoundingClientRect().top +
+        window.pageYOffset +
+        yOffset;
+
       window.scrollTo({
-        top: '80px',
+        top: yPosition,
         behavior: "smooth",
       });
-    });
-  });
+
+      toggleMenu();
+    }
+  };
+
+  const items = [
+    { value: "Главная", href: "#блок0", icon: "anchor" },
+    { value: "Услуги", href: "#блок1", icon: "dialer_sip" },
+    { value: "О клинике", href: "#блок2", icon: "api" },
+    { value: "Адрес", href: "#блок3", icon: "android" },
+  ];
 
   return (
     <>
@@ -36,23 +46,17 @@ const BurgerMenu = ({ active, setActive, toggleMenu }) => {
         onClick={() => setActive(false)}
       >
         <div className="menu__content" onClick={(e) => e.stopPropagation()}>
-          {/* <div className="menu__header">{header}</div> */}
           <ul>
-            {items.map(
-              (
-                item,
-                index 
-              ) => (
-                <li key={index}>
-                  {" "}
-                  {/* Add key with index */}
-                  <a href={item.href} onClick={() => toggleMenu()}>
-                    {item.value}
-                  </a>
-                  {/* <span className='material-icons'>{item.icon}</span> */}
-                </li>
-              )
-            )}
+            {items.map((item, index) => (
+              <li key={index}>
+                <a
+                  href={item.href}
+                  onClick={(e) => handleLinkClick(e, item.href)}
+                >
+                  {item.value}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

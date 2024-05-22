@@ -13,17 +13,6 @@ import { Modal, Box, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
 import {
-  Container,
-  Typography,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-} from "@mui/material";
-import EmailIcon from "@mui/icons-material/Email";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-
-import {
   CheckCircleIcon,
   PhoneIcon,
   EnvelopeIcon,
@@ -73,113 +62,6 @@ export default function AppMain() {
       </div>
 
       <Grid />
-
-      {/* <Box sx={{ backgroundColor: "#2d2d2d", color: "#fff", py: 5 }}>
-        <Container maxWidth="lg">
-          <Typography variant="h2" align="center" gutterBottom>
-            Улыбка вашей мечты с Кобиловым Абдикадиром!
-          </Typography>
-
-          <Typography variant="body1" gutterBottom>
-            Приветствуем вас на сайте Dental Clinic! Мы рады предложить вам
-            широкий спектр стоматологических услуг, предоставляемых опытным и
-            высококвалифицированным врачом-стоматологом Кобиловым Абликадиром.
-          </Typography>
-
-          <Typography variant="body1" gutterBottom>
-            Кобилов Абликадир обладает многолетним опытом работы и непрерывным
-            стремлением к совершенствованию своих навыков. Он использует только
-            самые передовые методы лечения и новейшее оборудование, чтобы
-            обеспечить вам максимально комфортное и безболезненное посещение.
-          </Typography>
-
-          <Typography variant="h3" gutterBottom>
-            Наши преимущества:
-          </Typography>
-
-          <List>
-            {[
-              "Опытный и внимательный врач",
-              "Современное оборудование",
-              "Комфортные условия лечения",
-              "Безболезненные процедуры",
-              "Индивидуальный подход",
-              "Доступные цены",
-            ].map((item) => (
-              <ListItem key={item}>
-                <ListItemIcon>
-                  <CheckCircleIcon style={{ color: "#ff5722" }} />
-                </ListItemIcon>
-                <ListItemText primary={item} />
-              </ListItem>
-            ))}
-          </List>
-
-          <Typography variant="h3" gutterBottom>
-            Что мы предлагаем:
-          </Typography>
-
-          <List>
-            {[
-              "Обследование полости рта",
-              "Лечение кариеса",
-              "Установка имплантов и протезов",
-              "Отбеливание зубов",
-              "Исправление прикуса",
-              "И многое другое!",
-            ].map((item) => (
-              <ListItem key={item}>
-                <ListItemIcon>
-                  <CheckCircleIcon style={{ color: "#ff5722" }} />
-                </ListItemIcon>
-                <ListItemText primary={item} />
-              </ListItem>
-            ))}
-          </List>
-
-          <Typography variant="body1" gutterBottom>
-            Мы также предлагаем нашим пациентам индивидуальный подход и гибкую
-            систему скидок.
-          </Typography>
-
-          <Typography variant="body1" gutterBottom>
-            Позаботьтесь о здоровье вашей улыбки вместе с Кобилов Абликадир!
-            Запишитесь на прием уже сегодня!
-          </Typography>
-
-          <Typography variant="h3" gutterBottom>
-            Контакты:
-          </Typography>
-
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <PhoneIcon style={{ color: "#ff5722" }} />
-              </ListItemIcon>
-              <ListItemText primary="Телефон: 8-800-555-35-35" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <EmailIcon style={{ color: "#ff5722" }} />
-              </ListItemIcon>
-              <ListItemText primary="Email: Qobilov@mail.uz" />
-            </ListItem>
-          </List>
-
-          <Typography variant="body1" gutterBottom>
-            <strong>Dental Clinic / DrQobilov</strong>
-          </Typography>
-
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <LocationOnIcon style={{ color: "#ff5722" }} />
-              </ListItemIcon>
-              <ListItemText primary="Адрес: Улица Пушкина, дом Колотушкина" />
-            </ListItem>
-          </List>
-        </Container>
-      </Box> */}
 
       <div
         id="блок2"
