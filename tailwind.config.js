@@ -6,6 +6,8 @@ export default {
   },
   plugins: [],
 };
+
+
 module.exports = {
   plugins: [require("flowbite/plugin")],
   // add the folders and files from your templates
@@ -37,7 +39,9 @@ module.exports = {
 
   theme: {
     extend: {
-      // extend base Tailwind CSS utility classes
+      borderRadius: {
+        'custom-50px': '50px',
+      },
     },
   },
 };

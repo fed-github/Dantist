@@ -28,8 +28,6 @@ const BurgerMenu = ({ active, setActive, toggleMenu }) => {
     });
   });
 
-
-
   return (
     <>
       <div className={active ? "blur" : ""}></div>
