@@ -9,7 +9,6 @@ export default {
 
 
 module.exports = {
-  plugins: [require("flowbite/plugin")],
   // add the folders and files from your templates
   content: [
     "./layouts/**/*.html",
