@@ -11,8 +11,8 @@ import ReplyIcon from "@mui/icons-material/Reply";
 
 import { Modal, Box, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-import PaidSharpIcon from '@mui/icons-material/PaidSharp';
-import AssignmentReturnedSharpIcon from '@mui/icons-material/AssignmentReturnedSharp';
+import PaidSharpIcon from "@mui/icons-material/PaidSharp";
+import PaymentMenu from "./PaymentMenu";
 
 import {
   CheckCircleIcon,
@@ -23,8 +23,13 @@ import {
 
 export default function AppMain() {
   const [open, setOpen] = useState(false);
+  const [paymentOpen, setPaymentOpen] = useState(false);
+
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const handlePaymentOpen = () => setPaymentOpen(true);
+  const handlePaymentClose = () => setPaymentOpen(false);
 
   return (
     <main className="main">
@@ -66,21 +71,20 @@ export default function AppMain() {
 
       <div
         id="блок2"
-        className="bg-gradient-to-r from-blue-500  to-blue-700 text-white py-12 rounded-lg "
+        className="bg-gradient-to-r from-blue-500 to-blue-700 text-white py-12 rounded-lg "
       >
         <div className="container mx-auto max-w-7xl px-5 ">
-
           <h2 className="text-4xl font-bold text-center text-white">
             Улыбка вашей мечты с Кобиловым Абдикадиром!
           </h2>
 
-          <p className="text-lg mt-4  text-white">
+          <p className="text-lg mt-4 text-white">
             Приветствуем вас на сайте Dental Clinic! Мы рады предложить вам
             широкий спектр стоматологических услуг, предоставляемых опытным и
             высококвалифицированным врачом-стоматологом Кобиловым Абликадиром.
           </p>
 
-          <p className="text-lg mt-4  text-white">
+          <p className="text-lg mt-4 text-white">
             Кобилов Абликадир обладает многолетним опытом работы и непрерывным
             стремлением к совершенствованию своих навыков. Он использует только
             самые передовые методы лечения и новейшее оборудование, чтобы
@@ -91,7 +95,7 @@ export default function AppMain() {
             Наши преимущества:
           </h2>
 
-          <ul className="list-disc list-inside text-lg mt-4  text-white">
+          <ul className="list-disc list-inside text-lg mt-4 text-white">
             {[
               "Опытный и внимательный врач",
               "Современное оборудование",
@@ -222,20 +226,39 @@ export default function AppMain() {
               }}
             >
               <Button
-                onClick={handleClose}
+                onClick={handlePaymentOpen}
                 variant="contained"
                 sx={{
                   backgroundColor: "#ff5722",
                   color: "#ffffff",
                   marginTop: "15px",
-                }} // измените цвета по вашему усмотрению
+                }}
               >
-                <AssignmentReturnedSharpIcon/> <PaidSharpIcon sx={{ marginLeft: "4px" }} />
+                ADD card <PaidSharpIcon sx={{ marginLeft: "4px" }} />
               </Button>
             </Box>
+          </div>
+        </div>
+      </Modal>
+
+      <Modal
+        open={paymentOpen}
+        onClose={handlePaymentClose}
+        aria-labelledby="payment-modal-title"
+        aria-describedby="payment-modal-description"
+      >
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-gray-800 text-white rounded-lg p-10 shadow-lg max-w-lg w-80 sm:w-full relative">
+            <Box sx={{ position: "absolute", top: 8, right: 8 }}>
+              <IconButton onClick={handlePaymentClose} color="inherit">
+                <CloseIcon />
+              </IconButton>
+            </Box>
+            <PaymentMenu />
           </div>
         </div>
       </Modal>
     </main>
   );
 }
+
